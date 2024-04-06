@@ -13,15 +13,10 @@ This project is a front-end page designed to attract users to explore a pet adop
 * HTML5
 * CSS3
 
-## How to Use
+<!-- ## How to Use
 1. Clone the repository to your local machine.
 2. Open the index.html file in your browser to view the form.
-3. Modify the HTML and CSS files to customize the page to your liking.
-
-## Future Enhancements
-* Addition of more complex fields and validations.
-* Implementation of a backend service to receive and store form submissions.
-* Integration with a real pet adoption database to allow for live data usage.
+3. Modify the HTML and CSS files to customize the page to your liking. -->
 
 ## Let's Connect
 This project was created by myself, Steven Polanco.
