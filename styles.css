@@ -5,3 +5,15 @@ body {
     color: #1A090D;
     background-color: #F0F0F0;
 }
+
+.logo {
+    max-width: 25%;
+}
+
+.nav {
+    position: absolute;
+}
+
+.contact-form {
+    resize: none;
+}
