@@ -7,20 +7,20 @@ body {
 }
 
 .logo {
-    max-width: 10%;
-    float: left;
+    max-width: 40px;
 }
 
 .hamburger {
-    display: none; /* Hide by default */
+    display: block; /* Show the hamburger icon */
     cursor: pointer;
-    float: right;
 }
 
 #nav-bar {
-    display: flex;
+    /* display: flex; */
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
     align-items: center; /* Vertically center children */
-    justify-content: space-between; /* Horizontally separate children */
+    justify-items: center; /* Horizontally separate children */
     width: 100%; /* Full width */
     height: auto; /* Let the height adjust based on content */
     padding: 10px 0; /* Adjust padding for mobile */
@@ -39,15 +39,34 @@ body {
     display: none; /* Hide by default */
 }
 
+#nav-bar ul.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
+
+.hamburger.active i {
+    display: none;
+}
+
+.hamburger.active::after {
+    content: "\f077"; /* Up chevron icon in Font Awesome */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
 #nav-bar li {
     display: inline; /* Arrange the items in one line */
+    margin: 0 10px; /* Add space between the items */
 }
 
 #nav-bar a {
     color: white; /* White link color */
     text-decoration: none; /* Remove underline */
     padding: 8px; /* Adjust padding for mobile */
-    font-size: 14px; /* Adjust font size for mobile */
+    font-size: 20px; /* Adjust font size for mobile */
 }
 
 #nav-bar a:hover {
@@ -83,10 +102,33 @@ body {
 @media (min-width: 601px) {
     #nav-bar {
         display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
     #nav-bar ul {
         display: flex;
+    }
+
+    #nav-bar ul.show {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+    }
+
+    #nav-bar a {
+        font-size: 16px; /* Adjust font size for displays above 601px */
+    }
+
+    .hamburger.active i {
+        display: none;
+    }
+    
+    .hamburger.active::after {
+        content: "\f054"; /* Right chevron icon in Font Awesome */
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
     }
 
     #nav-bar li {
@@ -102,6 +144,7 @@ body {
     .hamburger {
         display: block;
     }
+
     #nav-bar ul {
         display: none;
     }
@@ -111,6 +154,7 @@ body {
     #nav-bar ul {
         display: flex;
     }
+
     .hamburger {
         display: none;
     }
