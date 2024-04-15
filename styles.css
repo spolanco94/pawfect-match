@@ -1,19 +1,117 @@
 body {
     max-width: 75%;
-    margin: 30px auto;
+    margin: 0 auto;
     padding: 0px;
     color: #1A090D;
     background-color: #F0F0F0;
 }
 
 .logo {
-    max-width: 25%;
+    max-width: 10%;
+    float: left;
 }
 
-.nav {
+.hamburger {
+    display: none; /* Hide by default */
+    cursor: pointer;
+    float: right;
+}
+
+#nav-bar {
+    display: flex;
+    align-items: center; /* Vertically center children */
+    justify-content: space-between; /* Horizontally separate children */
+    width: 100%; /* Full width */
+    height: auto; /* Let the height adjust based on content */
+    padding: 10px 0; /* Adjust padding for mobile */
+    background-color: #333; /* Dark background color */
+    color: white; /* White text color */
+    z-index: 1000; /* Stay on top of other elements */
+    position: relative; /* Add this to enable z-index */
+    margin-bottom: 5px; /* Add space between the navbar and the content */;
+}
+#nav-bar ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0; /* Center the list */
+    padding: 0;
+    overflow: hidden; /* Needed for floating */
+    text-align: right; /* Center the links */
+    display: none; /* Hide by default */
+}
+
+#nav-bar li {
+    display: inline; /* Arrange the items in one line */
+}
+
+#nav-bar a {
+    color: white; /* White link color */
+    text-decoration: none; /* Remove underline */
+    padding: 8px; /* Adjust padding for mobile */
+    font-size: 14px; /* Adjust font size for mobile */
+}
+
+#nav-bar a:hover {
+    background-color: #111; /* Add a hover effect */
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.video-container iframe {
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .contact-form {
-    resize: none;
+    resize: none; /* Disable resizing */
+}
+
+/* Responsive layout - makes the menu and logo stack on top of each other */
+@media (min-width: 368px){
+    .logo {
+        max-width: 8%;
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 601px) {
+    #nav-bar {
+        display: flex;
+    }
+
+    #nav-bar ul {
+        display: flex;
+    }
+
+    #nav-bar li {
+        margin: 0 10px;
+    }
+
+    .logo {
+        max-width: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    #nav-bar ul {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    #nav-bar ul {
+        display: flex;
+    }
+    .hamburger {
+        display: none;
+    }
 }
