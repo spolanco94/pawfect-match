@@ -19,20 +19,45 @@
                     <i class="fa fa-bars"></i>
                 </a>
                 <ul class="nav-links">
-                    <li class="nav-link"><a href="#link2">Testimonials</a></li>
-                    <li class="nav-link"><a href="#link1">Questionnaire</a></li>
-                    <li class="nav-link"><a href="#link3">Contact Us</a></li>
+                    <li class="nav-link"><a href="#listings">Find a pet</a></li>
+                    <li class="nav-link"><a href="#link2">Questionnaire</a></li>
+                    <li class="nav-link"><a href="#link3">Testimonials</a></li>
+                    <li class="nav-link"><a href="#link4">Contact</a></li>
                 </ul>
             </nav>
         </header>
-
-
-
-        <div class="video-container">
-            <iframe id="video" src="https://www.youtube.com/embed/gQtXgx_WmLE?si=-15MIZHNDh7F0-CA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="jumbotron">
+            <h1>Meet Your Forever Friend: Begin Your Adoption Journey!</h1>
+            <p>Search amongst local listings for your new friend!</p>
+            <a href="#listings"><button id="search">Search</button></a>
+            <p>Or...fill out our questionnaire to find the perfect match!</p>
+            <a href="#questionnaire"><button id="questionnaire">Questionnaire</button></a>
+        </div>
+        <div class="testimonials">
+            <div class="video-container">
+                <iframe id="video" src="https://www.youtube.com/embed/gQtXgx_WmLE?si=-15MIZHNDh7F0-CA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="testimonial-container">
+                <h2>Testimonials</h2>
+                <section class="testimonial">
+                    <h4>Miss Mary Mack</h4>
+                    <p>"I found my best friend through Pawfect Match. I couldn't be happier!"</p>
+                </section>
+                <section class="testimonial">
+                    <h4>Ronald Weasley</h4>
+                    <p>"I found my best friend through Pawfect Match. I couldn't be happier!"</p>
+                </section>
+                <section class="testimonial">
+                    <h4>Bruce Wayne</h4>
+                    <p>"Pawfect Match helped us find the ideal pet for our family. Thank you!1"</p>
+                </section>
+            </div>
         </div>
 
         <form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
+            <h3>Have a question? Leave us a message!</h3>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Name" required>
             <label for="email">Email:</label>
             <input type="email" name="email" id="email" placeholder="email@example.com" required>
             <label for="contact">Questions:</label>
