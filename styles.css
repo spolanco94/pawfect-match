@@ -269,9 +269,17 @@ body {
     #nav-bar li {
         margin: 0 10px;
     }
+
+    .jumbotron {
+        background-image: url("img/andrew-s-ouo1hbizWwo-unsplash[1920x1280].jpg");
+    }
 }
 
 @media (min-width: 1023px) {
+    .jumbotron {
+        background-image: url("img/andrew-s-ouo1hbizWwo-unsplash[2400x1600].jpg");
+    }
+
     .video-container {
         margin: 0 auto;
         max-width: 80%;
