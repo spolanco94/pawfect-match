@@ -61,12 +61,34 @@ body {
     align-items: center;
     justify-content: center;
     padding-left: 20px;
-    width: 250px;
+    width: 300px;
+}
+
+#nav-bar .logo-name a {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+#nav-bar .logo-name a:hover {
+    background-color: transparent;
 }
 
 .hamburger {
     display: block; /* Show the hamburger icon */
     cursor: pointer;
+}
+
+#nav-bar .hamburger i,
+#nav-bar .hamburger i:hover,
+#nav-bar .hamburger i:active,
+#nav-bar .hamburger i:focus {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    fill: transparent; /* If the icon is an SVG */
+    stroke: transparent; /* If the icon is an SVG */
 }
 
 #nav-bar {
@@ -219,14 +241,34 @@ body {
     .site-name {
         display: none;
     }
+    #nav-bar {
+        justify-content: space-between; /* Logo at the start, hamburger at the end */
+    }
+    #nav-bar.menu-open{
+        flex-direction: column; /* Stack the logo and the menu vertically */
+        justify-content: center; /* Center everything when the menu is open */
+        align-content: center;
+    }
+    #nav-bar ul.show {
+        flex-direction: column; /* Stack the menu items vertically */
+        align-items: center; /* Center the menu items horizontally */
+    }
 }
 
 @media (min-width: 360px) and (max-width: 768px) {
+    #nav-bar {
+        flex-direction: column; /* Stack the logo and the menu vertically */
+        align-items: center; /* Center the logo and the menu horizontally */
+        align-content: center; /* Center the items vertically */
+    }
+    #nav-bar ul.show {
+        flex-direction: column; /* Stack the menu items vertically */
+        align-items: center; /* Center the menu items horizontally */
+    } 
     .nav-links ul {
         display: none;
         height: 0;
     }
-
     .nav-links.show ul {
         display: flex;
         flex-direction: column;
@@ -238,7 +280,6 @@ body {
     .hamburger {
         display: none; /* Hide the hamburger icon */
     }
-
     #nav-bar {
         display: flex;
         flex-direction: row;
@@ -246,45 +287,36 @@ body {
         align-items: center;
         padding: 5px 0;
     }
-
     #nav-bar ul {
         display: flex;
     }
-
     #nav-bar ul.show {
         display: flex;
         flex-direction: row;
         height: auto;
     }
-
     #nav-bar a {
         font-size: 16px; /* Adjust font size for displays above 601px */
     }
-
     .hamburger.active i {
         display: none;
     }
-    
     .hamburger.active::after {
         content: "\f054"; /* Right chevron icon in Font Awesome */
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
     }
-
     #nav-bar li {
         margin: 0 10px;
     }
-
     .jumbotron {
         background-image: url("img/andrew-s-ouo1hbizWwo-unsplash[1920x1280].jpg");
     }
-
     .video-container {
         width: 600px; /* Set a specific width */
         height: 337.5px; /* Set a specific height (56.25% of 600px) */
         padding-bottom: 0; /* Remove the padding-bottom */
     }
-
     .contact-form {
         max-width: 600px;
         margin: 0 auto;
@@ -304,7 +336,7 @@ body {
         font-size: 2em;
     }
 }
-@media (min-width: 1024px) and (max-width: 1358px) {
+@media (min-width: 1024px) and (max-width: 1458px) {
     #nav-bar {
         justify-content: center;
         padding: 15px 25%;
