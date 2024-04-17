@@ -6,7 +6,14 @@
         <title>Pawfect Match</title>
 
         <link rel="stylesheet" href="styles.css">
+
+        <!-- Font awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     </head>
     <body>
         <header id="header">
@@ -29,11 +36,20 @@
             </nav>
         </header>
         <div class="jumbotron">
-            <h1>Meet Your Forever Friend: Begin Your Adoption Journey!</h1>
-            <p>Search amongst local listings for your new friend!</p>
-            <a href="#listings"><button id="search">Search</button></a>
-            <p>Or...fill out our questionnaire to find the perfect match!</p>
-            <a href="#questionnaire"><button id="questionnaire">Questionnaire</button></a>
+            <div class="jumbo-wrapper">
+                <h1>Meet Your Forever Friend!</h1>
+                <h2>Begin Your Adoption Journey Today!</h2>
+                <div class="jumbo-actions">
+                    <div class="search">
+                        <p>Search local listings!</p>
+                        <a href="#listings"><button id="search-btn">Search</button></a>
+                    </div>
+                    <div class="match">
+                        <p>Complete Our Match Quiz!</p>
+                        <a href="#questionnaire"><button id="match-btn">Match</button></a>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="testimonials">
             <div class="video-wrapper">

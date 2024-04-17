@@ -8,6 +8,9 @@ body {
     padding: 0px;
     color: #212121;
     background-color: #F0F0F0;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .logo {
@@ -23,14 +26,14 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 400px; /* Adjust the height as needed */
+    height: 60%; /* Adjust the height as needed */
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #EFF1ED;
-    padding: 20px;
+    padding: 30px;
 }
 
 .jumbotron::before {
@@ -49,9 +52,75 @@ body {
     z-index: 2;
 }
 
+.jumbo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 75%;
+}
+
+.jumbo-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 .jumbotron h1 {
-    font-size: 1em; /* Adjust the font size as needed */
+    font-size: 2.5em;
+    /* text-align: center; */
     margin: 0;
+}
+
+.jumbotron h2 {
+    /* text-align: center; */
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.search, .match {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    font-size: 1.1em;
+}
+
+.search {
+    margin-top: 40px;
+    padding-bottom: 0;
+}
+
+.match {
+    flex-direction: row-reverse;
+    justify-content: center;
+    text-align: center;
+    padding-top: 0;
+}
+
+.search a {
+    margin-left: 10px;
+}
+
+.match a {
+    margin-right: 10px;
+}
+
+button {
+    background-color: #A8763E;
+    color: #EFF1ED;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: 600;
 }
 
 .logo-name {
@@ -253,6 +322,15 @@ body {
         flex-direction: column; /* Stack the menu items vertically */
         align-items: center; /* Center the menu items horizontally */
     }
+    .search, .match {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search a, .margin a {
+        margin: 0;
+    }
 }
 
 @media (min-width: 360px) and (max-width: 768px) {
@@ -329,7 +407,7 @@ body {
         /* font-size: 18px; */
     }
     .jumbotron h1 {
-        font-size: 2em;
+        font-size: 3em;
     }
 }
 @media (min-width: 1024px) and (max-width: 1458px) {
