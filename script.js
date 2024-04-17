@@ -11,9 +11,11 @@ document.querySelector('.hamburger').addEventListener('click', function() {
     if (navLinks.classList.contains('show')) {
         navBar.appendChild(hamburger);
         logoName.style.flexDirection = 'column';
+        hamburger.style.padding = '0';
     } else {
         navBar.insertBefore(hamburger, navLinks);
         logoName.style.flexDirection = 'row';
+        hamburger.style.paddingRight = 10 + 'px';
     }
 
     console.log('clicked'+document.querySelector('.nav-links').classList);

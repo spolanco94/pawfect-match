@@ -29,7 +29,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     color: #EFF1ED;
     padding: 20px;
 }
@@ -237,6 +236,7 @@ body {
 @media (max-width: 359px) {
     .logo-name {
         justify-content: flex-start;
+        width: 100px;
     }
     .site-name {
         display: none;
@@ -256,6 +256,9 @@ body {
 }
 
 @media (min-width: 360px) and (max-width: 768px) {
+    #nav-bar .hamburger {
+        padding: 5px!important; /* Overwrite padding from script */
+    }
     #nav-bar {
         flex-direction: column; /* Stack the logo and the menu vertically */
         align-items: center; /* Center the logo and the menu horizontally */
@@ -293,21 +296,14 @@ body {
     #nav-bar ul.show {
         display: flex;
         flex-direction: row;
-        height: auto;
     }
     #nav-bar a {
         font-size: 16px; /* Adjust font size for displays above 601px */
-    }
-    .hamburger.active i {
-        display: none;
     }
     .hamburger.active::after {
         content: "\f054"; /* Right chevron icon in Font Awesome */
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
-    }
-    #nav-bar li {
-        margin: 0 10px;
     }
     .jumbotron {
         background-image: url("img/andrew-s-ouo1hbizWwo-unsplash[1920x1280].jpg");
