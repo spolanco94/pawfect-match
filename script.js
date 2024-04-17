@@ -14,3 +14,17 @@ document.querySelector('.hamburger').addEventListener('click', function() {
 
     console.log('clicked'+document.querySelector('.nav-links').classList);
 });
+
+window.onload = function() { 
+    var navBar = document.querySelector('#nav-bar');
+    var body = document.querySelector('body');
+
+    body.style.paddingTop = navBar.offsetHeight + 'px';
+}
+
+window.onresize = function() {
+    var navBar = document.querySelector('#nav-bar');
+    var body = document.querySelector('body');
+
+    body.style.paddingTop = navBar.offsetHeight + 'px';
+}
