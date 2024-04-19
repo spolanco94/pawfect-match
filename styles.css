@@ -239,6 +239,16 @@ button {
     margin: 0 auto
 }
 
+.testimonial-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    /* max-width: 800px; */
+    margin: 0 auto;
+}
+
 #testimonials h2 {
     flex-direction: column;
     justify-content: center;
@@ -252,6 +262,24 @@ button {
     padding: 10px;
     max-width: 800px;
     margin: 0 auto;
+}
+
+.testimonial {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    height: auto;
+    width: 80%;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.testimonial:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
 }
 
 .video-wrapper {
@@ -403,10 +431,17 @@ button {
     .jumbotron {
         background-image: url("img/andrew-s-ouo1hbizWwo-unsplash[1920x1280].jpg");
     }
+    .testimonial-wrapper {
+        width: 80%;
+    }
     .testimonial-container {
         flex-direction: row;
         padding: 20px;
         max-width: 100%;
+    }
+    .testimonial {
+        width: 100%;
+        margin: 0 10px;
     }
     .video-container {
         width: 600px; /* Set a specific width */
