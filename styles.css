@@ -235,8 +235,13 @@ button {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    max-width: 600px;
+    max-width: 70%;
     margin: 0 auto
+}
+
+.adoption-info p {
+    font-size: 1.1em;
+    max-width: 600px;
 }
 
 .testimonial-wrapper {
