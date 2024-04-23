@@ -329,6 +329,7 @@ button {
     justify-content: flex;
     padding: 20px;
     border: none;
+    transition: all 0.3s ease-in-out;
 }
 
 .input-group {
@@ -346,22 +347,46 @@ button {
     width: 100%;
 }
 
+.input-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
 .textarea-group {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
     margin-bottom: 10px;
-
 }
+
 
 .textarea-group label {
     margin-bottom: 5px;
 }
 
-.comments {
+#email, #name, #contact {
+    width: 100%;
+    max-width: 750px;
+    margin: 6px 0;
+    padding: 8px 10px;
+    background-color: #F0F0F0;
+    border: none;
+    border-bottom: solid 2px #212121;
+    border-radius: 1px;
+    box-sizing: border-box;
+}
+
+#contact {
     resize: none; /* Disable resizing */
-    width: 100%; /* Full width */
+}
+
+#name:focus, #email:focus, #contact:focus {
+    background-color: #fff;
+    outline: 1px solid #212121;
 }
 
 /* Responsive layout - makes the menu and logo stack on top of each other */
